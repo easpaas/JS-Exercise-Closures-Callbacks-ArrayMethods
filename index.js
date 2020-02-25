@@ -283,7 +283,7 @@ function counterMaker() {
   let count = 0;
   
   return function counter() {
-    count++;
+    return count++;
   }
   // BROKEN CODE ENDS
 }
