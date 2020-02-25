@@ -283,7 +283,7 @@ function counterMaker() {
   let count = 0;
   
   return function counter() {
-    count ++;
+    count++;
   }
   // BROKEN CODE ENDS
 }
@@ -308,8 +308,14 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(value) {
+  let count = 0;
+
+  return function counter() {
+    for (let i = count; i < value; i++) {
+      count += i;
+    }
+  }
 }
 
 /////////////// END OF CHALLENGE ///////////////
