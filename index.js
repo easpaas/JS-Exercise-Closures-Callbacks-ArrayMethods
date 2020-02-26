@@ -309,12 +309,10 @@ function counterMaker() {
  * etc
 */
 function counterMakerWithLimit(value) {
-  let count = 0;
+  let count = -1;
 
   return function counter() {
-    for (let i = count; i < value; i++) {
-      count += i;
-    }
+    return (count === value) ? count = 0 : ++count;
   }
 }
 
